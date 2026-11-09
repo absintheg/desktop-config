@@ -1,0 +1,120 @@
+[backdrop]
+enabled = true
+blur_intensity = 0.4
+tint_intensity = 0.75
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    background_opacity = 0.9
+    capsule_thickness = 0.75
+    center = [ "workspaces" ]
+    contact_shadow = true
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "caffeine",
+        "session"
+    ]
+    margin_ends = "3%"
+    position = "bottom"
+    scale = 1.1000000089406967
+    start = [ "clock", "launcher", "active_window" ]
+    widget_spacing = 9
+
+[bluetooth]
+connect_when_enabled = true
+connection_notifications = true
+
+[brightness]
+enable_ddcutil = true
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[nightlight]
+enabled = true
+force = true
+temperature_day = 4700
+temperature_night = 4700
+
+[shell]
+font_family = "Noto Sans CJK HK"
+polkit_agent = true
+time_format = "{:%I:%M %p}"
+
+    [shell.launcher]
+    default_view = "pinned"
+    show_navigation_labels = false
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    clipboard_position = "auto"
+    launcher_placement = "attached"
+    session_placement = "floating"
+    session_position = "bottom_right"
+    transparency_mode = "soft"
+
+    [shell.window_switcher]
+    show_caption = false
+
+[theme]
+builtin = "Ayu"
+mode = "dark"
+source = "builtin"
+
+[widget.active_window]
+font_scale = 0.9
+
+[widget.clock]
+format = "{:%I:%M %p}"
+
+[widget.keyboard_layout]
+font_scale = 0.9
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
