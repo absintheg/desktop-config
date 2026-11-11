@@ -328,11 +328,6 @@ debug {
 	// honor-xdg-activation-with-invalid-serial
 }
 
-// window-rule {
-// 	match title="Rocket League"
-//     on-xdg-activate "set-urgent"
-// }
-
 window-rule {
 	match app-id="warp-taskbar"
 	open-floating true
