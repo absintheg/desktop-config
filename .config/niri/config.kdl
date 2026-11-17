@@ -11,7 +11,7 @@ prefer-no-csd
 
 // Cursor theme and size.
 cursor {
-    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-theme "breeze_cursors"
     xcursor-size 22
 }
 
@@ -126,6 +126,18 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 16
 
+    // Struts shrink the area occupied by windows, similarly to layer-shell panels.
+    // You can think of them as a kind of outer gaps. They are set in logical pixels.
+    // Left and right struts will cause the next window to the side to always be visible.
+    // Top and bottom struts will simply add outer gaps in addition to the area occupied by
+    // layer-shell panels and regular gaps.
+    struts {
+        left   -4
+        right  -4
+        top    -4
+        bottom -4
+    }
+
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -195,7 +207,7 @@ layout {
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+        // active-gradient from="#80c8ff" to="#85d8a0" angle=200
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
@@ -262,18 +274,6 @@ layout {
         color "#0007"
     }
 
-    // Struts shrink the area occupied by windows, similarly to layer-shell panels.
-    // You can think of them as a kind of outer gaps. They are set in logical pixels.
-    // Left and right struts will cause the next window to the side to always be visible.
-    // Top and bottom struts will simply add outer gaps in addition to the area occupied by
-    // layer-shell panels and regular gaps.
-    struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
-    }
-
 	background-color "transparent"
 }
 
@@ -316,7 +316,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    // slowdown 0.8
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -387,7 +387,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 4
+    geometry-corner-radius 6
     clip-to-geometry true
 }
 
