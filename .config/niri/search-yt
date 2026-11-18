@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-query=$(printf "" | noctalia dmenu --prompt "Search youtube") || exit
+query=$(printf "" | noctalia dmenu --prompt "Search Youtube") || exit
 
 if [[ -z "$query" ]]; then
 	exit

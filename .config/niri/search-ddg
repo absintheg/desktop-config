@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+query=$(printf "" | noctalia dmenu --prompt "Search DuckDuckGo") || exit
+
+if [[ -z "$query" ]]; then
+	exit
+fi
+
+query_encoded=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote_plus(sys.argv[1]))" "$query")
+
+xdg-open "https://duckduckgo.com/?q=$query_encoded"
