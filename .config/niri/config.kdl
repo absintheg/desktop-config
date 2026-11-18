@@ -447,11 +447,12 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+G hotkey-overlay-title="Open Desktop" { spawn-sh "dolphin --new-window ~/Desktop"; }
-    Mod+E hotkey-overlay-title="Open File Manager" { spawn-sh "dolphin --new-window ~"; }
-    Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
-    Mod+P hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
+	// Suggested binds for running programs: terminal, app launcher, screen locker.
+	Mod+G hotkey-overlay-title="Open Desktop" { spawn-sh "dolphin --new-window ~/Desktop"; }
+	Mod+E hotkey-overlay-title="Open File Manager" { spawn-sh "dolphin --new-window ~"; }
+	Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+	Mod+P hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
+	Mod+Y hotkey-overlay-title="Search Youtube" { spawn "~/.config/niri/search-yt"; }
 
     Mod+S           hotkey-overlay-title="Run an Application"              { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+X           hotkey-overlay-title="Launch control center"           { spawn-sh "noctalia msg panel-toggle control-center"; }
